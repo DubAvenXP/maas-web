@@ -14,7 +14,7 @@ const { users, columns, loading } = useUser();
 </script>
 
 <template>
-    <q-page class="q-pl-lg q-pt-md">
+    <q-page class="q-pl-lg q-pt-md bg-accent">
         <h3 class="q-mt-md">Usuarios</h3>
         <maas-loader v-if="loading" />
         <div v-else class="q-pr-xl">
