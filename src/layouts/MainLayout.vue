@@ -1,6 +1,6 @@
 <script setup>
-import customHeaderVue from "src/shared/components/custom-header.vue";
-import { useLayoutStore } from "./../stores/layout";
+import MaasHeader from "src/components/maas-header.vue";
+import { useLayoutStore } from "src/stores/default";
 
 const layoutStore = useLayoutStore();
 
@@ -52,7 +52,7 @@ const links = [
 
 <template>
     <q-layout view="hHh Lpr lff">
-        <custom-header-vue />
+        <maas-header />
         <q-drawer v-model="layoutStore.leftDrawerOpen" show-if-above bordered>
             <q-scroll-area :style="scrollAreaStyles">
                 <q-list padding>
