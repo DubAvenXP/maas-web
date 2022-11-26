@@ -4,14 +4,48 @@ import { useLayoutStore } from "./../stores/layout";
 
 const layoutStore = useLayoutStore();
 
+const scrollAreaStyles = {
+    height: "calc(100% - 150px)",
+    marginTop: "150px",
+    borderRight: "1px solid #ddd",
+};
+
 const links = [
-    { name: "home", text: "Clientes", icon: "home", to: "/" },
-    { name: "about", text: "Servicios", icon: "info", to: "/about" },
     {
-        name: "contact",
+        name: "home",
+        text: "Home",
+        icon: "home",
+        to: "/",
+    },
+    {
+        name: "assignments",
+        text: "Asignaciones",
+        icon: "assignment",
+        to: "/assignments",
+    },
+    {
+        name: "availabilities",
         text: "Disponibilidades",
-        icon: "contact_mail",
-        to: "/contact",
+        icon: "calendar_today",
+        to: "/availabilities",
+    },
+    {
+        name: "clients",
+        text: "Clientes",
+        icon: "people",
+        to: "/clients",
+    },
+    {
+        name: "services",
+        text: "Servicios",
+        icon: "local_offer",
+        to: "/services",
+    },
+    {
+        name: "users",
+        text: "Usuarios",
+        icon: "person",
+        to: "/users",
     },
 ];
 </script>
@@ -20,19 +54,14 @@ const links = [
     <q-layout view="hHh Lpr lff">
         <custom-header-vue />
         <q-drawer v-model="layoutStore.leftDrawerOpen" show-if-above bordered>
-            <q-scroll-area
-                style="
-                    height: calc(100% - 150px);
-                    margin-top: 150px;
-                    border-right: 1px solid #ddd;
-                "
-            >
+            <q-scroll-area :style="scrollAreaStyles">
                 <q-list padding>
                     <q-item
                         clickable
                         v-ripple
                         v-for="link in links"
                         :key="link.name"
+                        :to="link.to"
                     >
                         <q-item-section avatar>
                             <q-icon :name="link.icon" />

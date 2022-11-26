@@ -2,14 +2,12 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: "IndexPage",
+    name: "ServicesPage",
 });
 </script>
 
 <script setup>
-const message = "Index";
-// set name of the component
-// this is used for the <router-view> component
+const message = "Services";
 </script>
 
 <template>
