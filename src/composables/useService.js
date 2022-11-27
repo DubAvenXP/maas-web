@@ -11,8 +11,12 @@ export const useService = () => {
         service: computed(() => serviceStore.service),
         fetchServices: serviceStore.fetchServices,
         fetchServiceById: serviceStore.fetchServiceById,
-        onChangeWeek: (week) => {
-            serviceStore.fetchServiceById(serviceStore.service.id, week);
+        onChangeWeek: (week, resource) => {
+            serviceStore.fetchServiceById(
+                serviceStore.service.id,
+                week,
+                resource
+            );
         },
     };
 };

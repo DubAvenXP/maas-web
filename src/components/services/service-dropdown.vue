@@ -1,6 +1,13 @@
 <script setup>
 import { useService } from "src/composables";
 
+const props = defineProps({
+    endpoint: {
+        type: String,
+        required: true,
+    },
+});
+
 const { services, fetchServices, fetchServiceById, loading } = useService();
 
 fetchServices();
@@ -18,7 +25,7 @@ fetchServices();
                     :key="service.id"
                     clickable
                     v-close-popup
-                    @click="fetchServiceById(service.id)"
+                    @click="fetchServiceById(service.id, null, props.endpoint)"
                 >
                     <q-item-section>
                         <q-item-label>

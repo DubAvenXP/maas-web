@@ -15,7 +15,9 @@ const { affectedAssignments } = useAvailability();
                     <q-btn
                         label="Anterior"
                         color="secondary"
-                        @click="onChangeWeek(service.prev_week)"
+                        @click="
+                            onChangeWeek(service.prev_week, 'availabilities')
+                        "
                     />
                 </div>
                 <h5 class="q-my-none q-mx-md">
@@ -25,7 +27,9 @@ const { affectedAssignments } = useAvailability();
                     <q-btn
                         label="siguiente"
                         color="secondary"
-                        @click="onChangeWeek(service.next_week)"
+                        @click="
+                            onChangeWeek(service.next_week, 'availabilities')
+                        "
                     />
                 </div>
             </div>
@@ -33,7 +37,7 @@ const { affectedAssignments } = useAvailability();
                 <span class="item"> Cliente: {{ service.client_name }} </span>
                 <span class="item"> Servicio: {{ service.name }} </span>
                 <span class="item">
-                    Total de turnos: {{ service.shifts.length }}
+                    Total de turnos: {{ service.shifts?.length }}
                 </span>
             </div>
             <template v-if="affectedAssignments">
