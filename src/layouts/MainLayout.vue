@@ -35,12 +35,12 @@ const links = [
         icon: "people",
         to: "/clients",
     },
-    {
-        name: "services",
-        text: "Servicios",
-        icon: "local_offer",
-        to: "/services",
-    },
+    // {
+    //     name: "services",
+    //     text: "Servicios",
+    //     icon: "local_offer",
+    //     to: "/services",
+    // },
     {
         name: "users",
         text: "Usuarios",

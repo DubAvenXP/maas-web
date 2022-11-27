@@ -14,8 +14,8 @@ const layoutStore = useLayoutStore();
                 aria-label="Menu"
                 @click="layoutStore.toggleLeftDrawer"
             />
-            <q-toolbar-title>Monitoring as a Service</q-toolbar-title>
-            <div>MaaS System v.0.0.0</div>
+            <q-toolbar-title> Quasar App </q-toolbar-title>
+            <div>Quasar v{{ $q.version }}</div>
         </q-toolbar>
     </q-header>
 </template>

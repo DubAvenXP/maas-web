@@ -1,14 +1,15 @@
-// import { useUserStore } from "src/stores/default";
+import { useServiceStore } from "src/stores/default";
 import { computed } from "vue";
 
 export const useService = () => {
-    // const usersStore = useUserStore();
-
-    // usersStore.fetchUsers();
+    const serviceStore = useServiceStore();
 
     return {
-        // users: computed(() => usersStore.users),
-        // loading: computed(() => usersStore.loading),
-        // columns,
+        serviceStore,
+        loading: computed(() => serviceStore.loading),
+        services: computed(() => serviceStore.services),
+        service: computed(() => serviceStore.service),
+        fetchServices: serviceStore.fetchServices,
+        fetchServiceById: serviceStore.fetchServiceById,
     };
 };

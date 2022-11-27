@@ -29,9 +29,13 @@ const props = defineProps({
                     <q-avatar color="secondary" text-color="white">
                         {{ shift.day.charAt(0).toUpperCase() }}
                     </q-avatar>
-                    <q-item-section class="q-ml-md">
-                        {{ shift.day }} - {{ shift.start_time }} -
-                        {{ shift.end_time }}
+                    <q-item-section class="q-ml-md flex">
+                        <span class="text-capitalize">
+                            {{ shift.day }}
+                        </span>
+                        <span>
+                            {{ shift.start_time }} - {{ shift.end_time }}
+                        </span>
                     </q-item-section>
                 </q-item>
             </q-list>
