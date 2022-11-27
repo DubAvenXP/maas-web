@@ -3,3 +3,4 @@ export * from "./useService";
 export * from "./useClient";
 export * from "./useAvailability";
 export * from "./useAssignment";
+export * from "./useTime";

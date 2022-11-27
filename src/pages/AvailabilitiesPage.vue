@@ -10,6 +10,7 @@ import MaasLoader from "src/components/maas-loader.vue";
 import ServiceDropdown from "src/components/services/service-dropdown.vue";
 
 import AvailabilityPanel from "src/components/availabilities/availability-panel.vue";
+import AvailabilityGrid from "src/components/availabilities/availability-grid.vue";
 
 import { useAvailability, useService } from "src/composables";
 
@@ -28,6 +29,7 @@ const { service, loading } = useService();
 
         <template v-else>
             <availability-panel />
+            <availability-grid />
         </template>
     </q-page>
 </template>

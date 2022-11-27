@@ -19,10 +19,14 @@ export const useServiceStore = defineStore("service", () => {
         }
     }
 
-    async function fetchServiceById(id) {
+    async function fetchServiceById(id, week) {
         try {
             loading.value = true;
-            const { data } = await api.get(`/services/${id}/availabilities`);
+
+            let url = `/services/${id}/availabilities`;
+            if (week) url += `?week=${week}`;
+
+            const { data } = await api.get(url);
             service.value = data;
         } catch (error) {
             console.error(error);
