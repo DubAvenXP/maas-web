@@ -7,7 +7,7 @@ const { getDateByWeek } = useTime();
 </script>
 <template>
     <h5>Asignaciones finales</h5>
-    <div v-if="service.id" class="assignments">
+    <div v-if="service.assignments" class="assignments">
         <div
             v-for="assignment in service.assignments[0]?.assignments_for_week"
             :key="assignment.day"
