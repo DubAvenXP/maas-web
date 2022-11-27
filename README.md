@@ -14,28 +14,6 @@ Node v18.12.0
 
 ## Estrucutra de carpetas
 
-.
-├── public
-│ └── icons
-└── src
-├── assets
-├── boot
-├── components
-│ ├── assignments
-│ ├── availabilities
-│ ├── clients
-│ ├── services
-│ ├── shifts
-│ └── user
-├── composables
-├── css
-├── layouts
-├── pages
-├── router
-├── shared
-│ └── components
-└── stores
-
 components: Contiene los componentes de la aplicación. Estos componentes se dividen en carpetas según su funcionalidad y pagina a la que pertenecen.
 
 composables: Contiene los composables de la aplicación. Estos son los archivos que contienen la lógica de la aplicación. Se agrupan por recurso para facilitar su mantenimiento y ser reutilizados.
